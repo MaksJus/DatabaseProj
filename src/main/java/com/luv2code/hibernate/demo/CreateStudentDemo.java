@@ -29,7 +29,9 @@ public class CreateStudentDemo {
 			//start a transaction
 			session.beginTransaction();
 			//save the student object
-			session.delete(s1);
+			session.save(s1);
+			session.save(s2);  //Hello 
+			session.save(s3);
 			System.out.println("saving the students..");
 			//commit the transaction
 			session.getTransaction().commit();
